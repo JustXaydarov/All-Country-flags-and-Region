@@ -3,22 +3,22 @@ const container = document.getElementById("container")
 const request = new XMLHttpRequest()
 
 request.open(
-    "GET",
-    "https://restcountries.com/v3.1/all?fields=name,flags,region,capital"
+  "GET",
+  "https://restcountries.com/v3.1/all?fields=name,flags,region,capital"
 )
 
 request.send()
 
 request.addEventListener("load", function () {
-    const data = JSON.parse(this.responseText)
+  const data = JSON.parse(this.responseText)
 
-    data.forEach((country) => {
-      
-        const card = document.createElement("div")
+  data.forEach((country) => {
 
-        card.classList.add("card")
+    const card = document.createElement("div")
 
-        card.innerHTML = `
+    card.classList.add("card")
+
+    card.innerHTML = `
       <img src="${country.flags.png}" alt="flag">
       <div class="card-body">
         <h3>${country.name.common}</h3>
@@ -31,9 +31,9 @@ request.addEventListener("load", function () {
       </div>
 
     `
-        container.appendChild(card)
+    container.appendChild(card)
 
-    })
+  })
 
 })
 
