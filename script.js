@@ -8,6 +8,7 @@ request.open(
 )
 
 request.send()
+
 request.addEventListener("load", function () {
     const data = JSON.parse(this.responseText)
 
