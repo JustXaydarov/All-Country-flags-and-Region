@@ -13,6 +13,7 @@ request.addEventListener("load", function () {
     const data = JSON.parse(this.responseText)
 
     data.forEach((country) => {
+      
         const card = document.createElement("div")
 
         card.classList.add("card")
