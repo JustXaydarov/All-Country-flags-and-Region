@@ -30,6 +30,7 @@ request.addEventListener("load", function () {
 
     `
         container.appendChild(card)
+
     })
 
 })
